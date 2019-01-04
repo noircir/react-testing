@@ -35,6 +35,4 @@ class CommentBox extends React.Component {
     }
 }
 
-
-
 export default connect(null, actions )(CommentBox);

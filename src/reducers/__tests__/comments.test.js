@@ -16,4 +16,5 @@ it('handles action with unknown type', () => {
     const newState = commentsReducer([], { type: 'OHIBJNJKNOHOHN' });
 
     expect(newState).toEqual([]);
+    
 });
