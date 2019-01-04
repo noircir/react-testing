@@ -1,11 +1,15 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import CommentBox from 'components/CommentBox';
+import Root from 'Root';
 
 let wrapper;
 
+// Wrap CommentBox into Provider with 'store' because otherwise it's
+// a free-floating CommentBox, not connected to the reducers.
+
 beforeEach(() => {
-    wrapper = mount(<CommentBox />);
+    wrapper = mount(<Root><CommentBox /></Root> );
 });
 
 afterEach(() => {
